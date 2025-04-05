@@ -1,0 +1,49 @@
+swagger: "2.0"
+info:
+  title: Bysykkel info
+  version: 1.0.0
+  description: Test API for accessing Oslo Bysykkel info
+paths:
+  /stations:
+    get:
+      summary: Get stations info
+      operationId: getStationsInfo
+      responses:
+        200:
+          description: Successful response
+          schema:
+            $ref: '#/definitions/StationStatusResponse'
+        500:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  StationStatusResponse:
+    type: object
+    properties:
+      last_updated:
+        type: integer
+      stations:
+        type: array
+        items:
+            $ref: '#/definitions/StationInfo'
+  StationInfo:
+    type: object
+    properties:
+      stationName:
+        type: string
+      bikesAvailable:
+        type: integer
+      docksAvailable:
+        type: integer
+      last_reported:
+        type: integer
+      station_id:
+        type: string
+  Error:
+    type: object
+    properties:
+      code:
+        type: string
+      message:
+        type: string
