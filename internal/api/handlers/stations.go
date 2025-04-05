@@ -31,7 +31,7 @@ func (s Stations) Handle(params operations.GetStationsInfoParams) middleware.Res
 		fmt.Print(err)
 		return operations.NewGetStationsInfoInternalServerError().WithPayload(&models.Error{
 			Code:    "GetStationsError",
-			Message: "Failed to get stations",
+			Message: "Failed to get stations info",
 		})
 	}
 
@@ -40,7 +40,7 @@ func (s Stations) Handle(params operations.GetStationsInfoParams) middleware.Res
 		fmt.Print(err)
 		return operations.NewGetStationsInfoInternalServerError().WithPayload(&models.Error{
 			Code:    "GetStationsError",
-			Message: "Failed to get stations",
+			Message: "Failed to get stations status",
 		})
 	}
 

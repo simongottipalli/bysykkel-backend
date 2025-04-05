@@ -1,11 +1,11 @@
 package clients
 
 type StationInfoResponse struct {
-	LastUpdated int          `json:"last_updated"`
-	Data        StationsData `json:"data"`
+	LastUpdated int              `json:"last_updated"`
+	Data        StationsInfoData `json:"data"`
 }
 
-type StationsData struct {
+type StationsInfoData struct {
 	Stations []StationInfo `json:"stations"`
 }
 
@@ -19,11 +19,11 @@ type StationInfo struct {
 }
 
 type StationStatusResponse struct {
-	LastUpdated int        `json:"last_updated"`
-	Data        StatusData `json:"data"`
+	LastUpdated int               `json:"last_updated"`
+	Data        StationStatusData `json:"data"`
 }
 
-type StatusData struct {
+type StationStatusData struct {
 	Stations []StationStatus `json:"stations"`
 }
 

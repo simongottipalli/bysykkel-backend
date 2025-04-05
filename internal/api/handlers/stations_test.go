@@ -29,7 +29,7 @@ func TestStations_Handle(t *testing.T) {
 		stations, byMock := setup(t)
 		infoResp := &clients.StationInfoResponse{
 			LastUpdated: 111,
-			Data: clients.StationsData{
+			Data: clients.StationsInfoData{
 				Stations: []clients.StationInfo{
 					{
 						StationID:   "5431",
@@ -56,7 +56,7 @@ func TestStations_Handle(t *testing.T) {
 		stations, byMock := setup(t)
 		infoResp := &clients.StationInfoResponse{
 			LastUpdated: 111,
-			Data: clients.StationsData{
+			Data: clients.StationsInfoData{
 				Stations: []clients.StationInfo{
 					{
 						StationID:   "5431",
@@ -71,7 +71,7 @@ func TestStations_Handle(t *testing.T) {
 		}
 		statusResp := &clients.StationStatusResponse{
 			LastUpdated: 111,
-			Data: clients.StatusData{
+			Data: clients.StationStatusData{
 				Stations: []clients.StationStatus{
 					{
 						StationID:         "5431",

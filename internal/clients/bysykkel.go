@@ -32,6 +32,7 @@ func (b *BysykkelClient) GetStationInfo(ctx context.Context) (*StationInfoRespon
 	if err != nil {
 		return nil, fmt.Errorf("failed to make station_information request: %w", err)
 	}
+	defer resp.Body.Close()
 
 	var responseData StationInfoResponse
 	if err := json.NewDecoder(resp.Body).Decode(&responseData); err != nil {
@@ -47,6 +48,7 @@ func (b *BysykkelClient) GetStationStatus(ctx context.Context) (*StationStatusRe
 	if err != nil {
 		return nil, fmt.Errorf("failed to make station_status request: %w", err)
 	}
+	defer resp.Body.Close()
 
 	var responseData StationStatusResponse
 	if err := json.NewDecoder(resp.Body).Decode(&responseData); err != nil {
@@ -67,7 +69,6 @@ func (b *BysykkelClient) makeRequest(ctx context.Context, path string) (*http.Re
 	if err != nil {
 		return nil, fmt.Errorf("request failed: %w", err)
 	}
-	defer resp.Body.Close()
 	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("unexpected status code: %d", resp.StatusCode)
 	}
