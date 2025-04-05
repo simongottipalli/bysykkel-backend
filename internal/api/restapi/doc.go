@@ -5,7 +5,7 @@
 //	Test API for accessing Oslo Bysykkel info
 //	Schemes:
 //	  http
-//	Host: localhost
+//	Host: localhost:8085
 //	BasePath: /
 //	Version: 1.0.0
 //

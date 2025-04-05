@@ -19,9 +19,6 @@ import (
 // swagger:model StationStatusResponse
 type StationStatusResponse struct {
 
-	// last updated
-	LastUpdated int64 `json:"last_updated,omitempty"`
-
 	// stations
 	Stations []*StationInfo `json:"stations"`
 }

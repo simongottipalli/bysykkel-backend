@@ -3,6 +3,7 @@ info:
   title: Bysykkel info
   version: 1.0.0
   description: Test API for accessing Oslo Bysykkel info
+host: localhost:8085
 paths:
   /stations:
     get:
@@ -21,8 +22,6 @@ definitions:
   StationStatusResponse:
     type: object
     properties:
-      last_updated:
-        type: integer
       stations:
         type: array
         items:

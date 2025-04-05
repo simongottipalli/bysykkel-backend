@@ -47,8 +47,7 @@ func (s Stations) Handle(params operations.GetStationsInfoParams) middleware.Res
 	resp := s.getStationInfo(*stationInfo, *stationStatus)
 
 	return operations.NewGetStationsInfoOK().WithPayload(&models.StationStatusResponse{
-		LastUpdated: 111,
-		Stations:    resp,
+		Stations: resp,
 	})
 }
 

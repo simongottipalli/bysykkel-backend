@@ -24,6 +24,7 @@ func init() {
     "title": "Bysykkel info",
     "version": "1.0.0"
   },
+  "host": "localhost:8085",
   "paths": {
     "/stations": {
       "get": {
@@ -81,9 +82,6 @@ func init() {
     "StationStatusResponse": {
       "type": "object",
       "properties": {
-        "last_updated": {
-          "type": "integer"
-        },
         "stations": {
           "type": "array",
           "items": {
@@ -101,6 +99,7 @@ func init() {
     "title": "Bysykkel info",
     "version": "1.0.0"
   },
+  "host": "localhost:8085",
   "paths": {
     "/stations": {
       "get": {
@@ -158,9 +157,6 @@ func init() {
     "StationStatusResponse": {
       "type": "object",
       "properties": {
-        "last_updated": {
-          "type": "integer"
-        },
         "stations": {
           "type": "array",
           "items": {
