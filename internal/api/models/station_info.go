@@ -23,14 +23,17 @@ type StationInfo struct {
 	// docks available
 	DocksAvailable int64 `json:"docksAvailable,omitempty"`
 
-	// last reported
-	LastReported int64 `json:"last_reported,omitempty"`
+	// latitude
+	Latitude float32 `json:"latitude,omitempty"`
+
+	// longitude
+	Longitude float32 `json:"longitude,omitempty"`
+
+	// station Id
+	StationID string `json:"stationId,omitempty"`
 
 	// station name
 	StationName string `json:"stationName,omitempty"`
-
-	// station id
-	StationID string `json:"station_id,omitempty"`
 }
 
 // Validate validates this station info

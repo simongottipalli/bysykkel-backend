@@ -68,13 +68,18 @@ func init() {
         "docksAvailable": {
           "type": "integer"
         },
-        "last_reported": {
-          "type": "integer"
+        "latitude": {
+          "type": "number",
+          "format": "float"
         },
-        "stationName": {
+        "longitude": {
+          "type": "number",
+          "format": "float"
+        },
+        "stationId": {
           "type": "string"
         },
-        "station_id": {
+        "stationName": {
           "type": "string"
         }
       }
@@ -143,13 +148,18 @@ func init() {
         "docksAvailable": {
           "type": "integer"
         },
-        "last_reported": {
-          "type": "integer"
+        "latitude": {
+          "type": "number",
+          "format": "float"
         },
-        "stationName": {
+        "longitude": {
+          "type": "number",
+          "format": "float"
+        },
+        "stationId": {
           "type": "string"
         },
-        "station_id": {
+        "stationName": {
           "type": "string"
         }
       }

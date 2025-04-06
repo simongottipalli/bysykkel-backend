@@ -35,10 +35,14 @@ definitions:
         type: integer
       docksAvailable:
         type: integer
-      last_reported:
-        type: integer
-      station_id:
+      stationId:
         type: string
+      latitude:
+        type: number
+        format: float
+      longitude:
+        type: number
+        format: float
   Error:
     type: object
     properties:

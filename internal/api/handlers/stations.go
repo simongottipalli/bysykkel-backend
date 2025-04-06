@@ -57,6 +57,8 @@ func (s Stations) getStationInfo(stationInfo clients.StationInfoResponse, status
 		si := models.StationInfo{
 			StationID:   info.StationID,
 			StationName: info.StationName,
+			Longitude:   float32(info.Longitude),
+			Latitude:    float32(info.Latitude),
 		}
 		for _, status := range statusStatus.Data.Stations {
 			if status.StationID == info.StationID {
